@@ -9,6 +9,7 @@ import UsersList from "./components/UsersList";
 import User from "./components/User";
 // import { authenticate } from "./services/auth";
 import { authenticate } from "./store/session";
+import Upload from "./components/upload/upload"
 
 function App() {
   // const [authenticated, setAuthenticated] = useState(false);
@@ -32,6 +33,9 @@ function App() {
       <Switch>
         <Route path="/login" exact={true}>
           <LoginForm />
+        </Route>
+        <Route path="/upload" exact={true}>
+          <Upload/>
         </Route>
         <Route path="/sign-up" exact={true}>
           <SignUpForm />

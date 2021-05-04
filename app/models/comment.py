@@ -1,6 +1,6 @@
 from .db import db
 from .user import User
-from .post import post
+from .clip import Clip
 
 class Comment(db.Model):
   __tablename__='comments'

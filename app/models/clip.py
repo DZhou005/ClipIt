@@ -11,5 +11,9 @@ class Clip(db.Model):
   description = db.Column(db.Text)
   clipUrl = db.Column(db.String, nullable=False)
   user = db.relationship('User', back_populates='clips')
-  created_at = db.Column(db.DateTime, nullable=False)
-  updated_at = db.Column(db.DateTime, nullable=False)
+  createdAt = db.Column(db.DateTime(timezone=True), nullable=False, server_default=func.now())
+
+  def to_dict(self):
+    return{
+      "createAt": self.CreatedAt
+    }

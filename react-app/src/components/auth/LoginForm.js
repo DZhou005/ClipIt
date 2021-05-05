@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import  { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Redirect, NavLink } from "react-router-dom";
 import { login } from "../../store/session";
+import './loginform.css'
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -31,34 +32,40 @@ const LoginForm = () => {
   }
 
   return (
-    <form onSubmit={onLogin}>
-      <div>
-        {errors.map((error) => (
-          <div>{error}</div>
-        ))}
-      </div>
-      <div>
-        <label htmlFor="email">Email</label>
-        <input
-          name="email"
-          type="text"
-          placeholder="Email"
-          value={email}
-          onChange={updateEmail}
-        />
-      </div>
-      <div>
-        <label htmlFor="password">Password</label>
-        <input
-          name="password"
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={updatePassword}
-        />
-        <button type="submit">Login</button>
-      </div>
-    </form>
+    <div className='loginFormContainer'>
+      <form onSubmit={onLogin}>
+        <div className='loginError'>
+          {errors.map((error) => (
+            <div>{error}</div>
+          ))}
+        </div>
+        <div className='loginFormInner'>
+          <h1 className='welcome'>Welcome Back</h1>
+          <div className='loginFormEmail'>
+            <label htmlFor="email">Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input
+              name="email"
+              type="text"
+              placeholder="Email"
+              value={email}
+              onChange={updateEmail}
+            />
+          </div>
+          <div className='loginFormPassword'>
+            <label htmlFor="password">Password&nbsp;</label>
+            <input
+              name="password"
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={updatePassword}
+            />
+          </div>
+            <button className='loginFormSubmit' type="submit">Login</button>
+        </div>
+            <NavLink to='/sign-up' className='signupLink'>Don't have an account? Signup here</NavLink>
+      </form>
+    </div>
   );
 };
 

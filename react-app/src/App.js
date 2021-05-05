@@ -3,7 +3,7 @@ import { useDispatch} from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar/NavBar";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import UsersList from "./components/UsersList";
 import User from "./components/User";
@@ -29,17 +29,17 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NavBar />
       <Switch>
         <Route path="/login" exact={true}>
           <LoginForm />
         </Route>
-        <Route path="/upload" exact={true}>
-          <Upload/>
-        </Route>
         <Route path="/sign-up" exact={true}>
           <SignUpForm />
         </Route>
+      <NavBar />
+        <ProtectedRoute path="/upload" exact={true}>
+          <Upload/>
+        </ProtectedRoute>
         <ProtectedRoute path="/users" exact={true} >
           <UsersList/>
         </ProtectedRoute>

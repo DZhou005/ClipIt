@@ -9,5 +9,4 @@ class Comment(db.Model):
   userId = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
   clipId = db.Column(db.Integer, db.ForeignKey('clips.id'), nullable=False)
   description = db.Column(db.Text, nullable=False)
-  created_at = db.Column(db.DateTime, nullable=False)
-  updated_at = db.Column(db.DateTime, nullable=False)
+  createdAt = db.Column(db.DateTime, nullable=False)

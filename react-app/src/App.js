@@ -10,6 +10,7 @@ import User from "./components/User";
 // import { authenticate } from "./services/auth";
 import { authenticate } from "./store/session";
 import Upload from "./components/upload/upload"
+import Profile from "./components/profile/profile"
 
 function App() {
   // const [authenticated, setAuthenticated] = useState(false);
@@ -36,8 +37,12 @@ function App() {
         <Route path="/sign-up" exact={true}>
           <SignUpForm />
         </Route>
-      <NavBar />
+        <ProtectedRoute path='/:name' exact={true}>
+          <NavBar/>
+          <Profile />
+        </ProtectedRoute>
         <ProtectedRoute path="/upload" exact={true}>
+          <NavBar/>
           <Upload/>
         </ProtectedRoute>
         <ProtectedRoute path="/users" exact={true} >
@@ -47,6 +52,7 @@ function App() {
           <User />
         </ProtectedRoute>
         <ProtectedRoute path="/" exact={true}>
+          <NavBar/>
           <h1>My Home Page</h1>
         </ProtectedRoute>
       </Switch>

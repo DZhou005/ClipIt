@@ -17,7 +17,7 @@ const NavBar = () => {
           </NavLink>
         </div>
         <div className="dropdown">
-          <button class='dropbtn'>{loggedInUser}</button>
+          <button className='dropbtn'>{loggedInUser}</button>
           <div className="dropdown-content">
             <LogoutButton/>
             <a href="/profile">Link 2</a>

@@ -15,5 +15,19 @@ class Clip(db.Model):
 
   def to_dict(self):
     return{
+      "id": self.id,
+      "user": self.user.to_dict(),
+      "title": self.title,
+      "clipUrl": self.clipUrl,
+      "description": self.description,
       "createAt": self.CreatedAt
+    }
+
+  def to_simple_dict(self):
+    return {
+      "id": self.id,
+      "title": self.title,
+      "description": self.description,
+      "clipUrl": self.clipUrl,
+      "createdAt": self.createdAt
     }

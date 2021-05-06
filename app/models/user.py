@@ -25,10 +25,21 @@ class User(db.Model, UserMixin):
   def check_password(self, password):
     return check_password_hash(self.password, password)
 
-
+  def to_simple_dict(self):
+    return {
+      'username':self.username
+    }
   def to_dict(self):
     return {
       "id": self.id,
       "username": self.username,
       "email": self.email
+    }
+
+  def to_user_dict(self):
+    return {
+      "id": self.id,
+      "username": self.username,
+      "email": self.email,
+      "clips": [clip.to_simple_dict() for clip in self.clips]
     }

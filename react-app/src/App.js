@@ -11,6 +11,8 @@ import User from "./components/User";
 import { authenticate } from "./store/session";
 import Upload from "./components/upload/upload"
 import Profile from "./components/profile/profile"
+import Clip from "./components/clip/clip"
+import AllClip from "./components/home/home"
 
 function App() {
   // const [authenticated, setAuthenticated] = useState(false);
@@ -37,9 +39,13 @@ function App() {
         <Route path="/sign-up" exact={true}>
           <SignUpForm />
         </Route>
-        <ProtectedRoute path='/:name' exact={true}>
+        <ProtectedRoute path='/profile/:name' exact={true}>
           <NavBar/>
           <Profile />
+        </ProtectedRoute>
+        <ProtectedRoute path='/clips/:id' exact={true}>
+          <NavBar/>
+          <Clip/>
         </ProtectedRoute>
         <ProtectedRoute path="/upload" exact={true}>
           <NavBar/>
@@ -53,7 +59,7 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path="/" exact={true}>
           <NavBar/>
-          <h1>My Home Page</h1>
+          <AllClip/>
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>

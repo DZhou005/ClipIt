@@ -20,7 +20,7 @@ class Clip(db.Model):
       "title": self.title,
       "clipUrl": self.clipUrl,
       "description": self.description,
-      "createAt": self.CreatedAt
+      "createAt": self.createdAt
     }
 
   def to_simple_dict(self):

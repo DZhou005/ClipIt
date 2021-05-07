@@ -4,10 +4,10 @@ from flask_login import current_user, login_required
 from app.AWS_upload import (
     upload_file_to_s3, allowed_file, get_unique_filename)
 
-clip_routes = Blueprint("clips", __name__)
+upload_routes = Blueprint("upload", __name__)
 
 
-@clip_routes.route("", methods=["POST"])
+@upload_routes.route("", methods=["POST"])
 @login_required
 def upload_clip():
     if "clip" not in request.files:

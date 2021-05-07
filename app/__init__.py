@@ -8,8 +8,10 @@ from flask_login import LoginManager
 from .models import db, User, Clip, Comment, Like
 from .api.user_routes import user_routes
 from .api.auth_routes import auth_routes
-from .api.upload import clip_routes
+from .api.upload import upload_routes
 from .api.profile import profile_routes
+from .api.clip import clip_routes;
+from .api.allClip import allClips_routes;
 
 from .seeds import seed_commands
 
@@ -33,8 +35,10 @@ app.cli.add_command(seed_commands)
 app.config.from_object(Config)
 app.register_blueprint(user_routes, url_prefix='/api/users')
 app.register_blueprint(auth_routes, url_prefix='/api/auth')
-app.register_blueprint(clip_routes, url_prefix='/api/upload')
+app.register_blueprint(upload_routes, url_prefix='/api/upload')
 app.register_blueprint(profile_routes, url_prefix='/api/profiles')
+app.register_blueprint(clip_routes, url_prefix='/api/clips')
+app.register_blueprint(allClips_routes, url_prefix='/api/allClips')
 db.init_app(app)
 Migrate(app, db)
 

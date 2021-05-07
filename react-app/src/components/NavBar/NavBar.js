@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { NavLink, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import LogoutButton from '../auth/LogoutButton';
 import './NavBar.css'
 
@@ -12,15 +12,18 @@ const NavBar = () => {
     <nav>
       <div className='navContainer'>
         <div>
-          <NavLink to="/" exact={true} activeClassName="active">
+          <Link to="/" exact={true} activeClassName="active">
             Home
-          </NavLink>
+          </Link>
+        </div>
+        <div className='uploadButtonContainer'>
+          <Link className='fas fa-file-upload fa-2x uploadButton' to='/upload'></Link>
         </div>
         <div className="dropdown">
-          <button className='dropbtn'>{loggedInUser}</button>
+          <button className='dropbtn'>{loggedInUser[0].toUpperCase()}</button>
           <div className="dropdown-content">
+            <a href={`/profile/${loggedInUser}`}>Profile</a>
             <LogoutButton/>
-            <a href="/profile">Link 2</a>
           </div>
         </div>
       </div>

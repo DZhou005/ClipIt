@@ -1,0 +1,21 @@
+.profileTitle{
+  color:rgb(113, 233, 233);
+}
+
+.profileContainer{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileThumbNails{
+  width: 35rem;
+  margin-top:4rem;
+  border: 3px solid rgb(113, 233, 233);
+}
+
+.profileThumbNailTitle{
+  margin-left: 13rem;
+  max-width: 20rem;
+}

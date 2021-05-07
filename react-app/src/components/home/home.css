@@ -1,0 +1,30 @@
+.homePageContainer{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeTitle{
+  margin-left: 12.5rem;
+  color: rgb(113, 233, 233);
+}
+
+.thumbNails{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.homeThumbNails{
+  width: 35rem;
+  margin-top:4rem;
+  border: 3px solid rgb(113, 233, 233);
+}
+
+.thumbTitle{
+  margin-left: 13rem;
+  max-width: 20rem;
+
+
+}

@@ -11,7 +11,7 @@ function AllClip() {
 
   useEffect(() => {
     (async () => {
-      await dispatch(allClipInfo(clipsArray))
+      await dispatch(allClipInfo())
     })();
   },[dispatch]);
 
@@ -20,7 +20,8 @@ function AllClip() {
     <div className='homePageContainer'>
       <div className='homeInnerContainer'>
       <h2 className='homeTitle'>ClipIt Highlights!</h2>
-        {clipsArray.map((clip,i) => {
+      {console.log("HELLOOOOOOOOOOOO")}
+       {clipsArray.length ? clipsArray.map((clip,i) => {
           return (
             <div className='thumbNails' key={i}>
               <Link to={`/clips/${clip.id}`}>
@@ -30,7 +31,9 @@ function AllClip() {
               </Link>
             </div>
           )
-        })}
+        })
+         : null
+      }
       </div>
     </div>
 

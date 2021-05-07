@@ -23,7 +23,7 @@ function Clip() {
       <h2>{clip.title}</h2>
       <video src={clip.clipUrl} controls type="video/mp4"/>
       <h3>
-        <Link to={`/profile/${clip.user.username}`}>{clip.user.username}</Link>: {clip.description}
+        <Link to={`/profile/${clip.user?.username}`}>{clip.user?.username}</Link>: {clip.description}
       </h3>
       <h6>uploaded on:{clip.createAt}</h6>
     </div>

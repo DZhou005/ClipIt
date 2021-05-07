@@ -10,12 +10,12 @@ const NavBar = () => {
 
   return (
     <nav>
-      <div className='navContainer'>
         <div>
           <Link to="/" exact={true} activeClassName="active">
             Home
           </Link>
         </div>
+      <div className='navContainer'>
         <div className='uploadButtonContainer'>
           <Link className='fas fa-file-upload fa-2x uploadButton' to='/upload'></Link>
         </div>

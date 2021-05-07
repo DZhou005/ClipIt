@@ -29,6 +29,6 @@ export default function allClipReducer(state = initialState, action) {
       const newState = { ...action.payload }
       return newState
     default:
-      return state;
+      return state
   }
 }

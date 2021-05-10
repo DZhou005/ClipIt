@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
-import { clipInfo, likeClip, unlikeClip } from '../../store/clip';
+import { clipInfo, likeClip, unlikeClip, commentOnClip} from '../../store/clip';
 import './clip.css'
 
 
@@ -12,12 +12,21 @@ function Clip() {
   const user = useSelector(state => state.session.user)
   const userId = user.id
   const likesOnAClip = clip.likes
+  const [description, setDescription] = useState('')
+
 
   useEffect(() => {
     (async () => {
       await dispatch(clipInfo(id))
     })();
   },[dispatch]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    dispatch(commentOnClip(userId, id, description))
+    setDescription('')
+    dispatch(clipInfo(id))
+  }
 
 
   const clipLike = async () => {
@@ -40,16 +49,16 @@ function Clip() {
 
   const unLikeClip = async () => {
     const likeId = yourLike();
-    dispatch(unlikeClip(likeId, id))
+    dispatch(unlikeClip(id, likeId))
 
   }
 
   const likeChecked = () => {
-    if (likesOnAClip.length > 0) {
+    if (likesOnAClip?.length > 0) {
       for (let i = 0; i < likesOnAClip.length; i++) {
         if(likesOnAClip[i].userId === userId) {
           return(
-            <button onClick={unLikeClip}>unLike</button>
+            <div className="fas fa-heart liked" onClick={unLikeClip}></div>
 
           )
         }
@@ -57,7 +66,7 @@ function Clip() {
     }
     else {
       return(
-        <button onClick={clipLike}>Like</button>
+        <div className="far fa-heart like" onClick={clipLike}></div>
       )
     }
   }
@@ -74,6 +83,14 @@ function Clip() {
       <div>
         {likeChecked()}
       </div>
+      <form onSubmit={handleSubmit}>
+        <input type="text"
+        value={description}
+        placeholder="comment"
+        onChange={(e) => setDescription(e.target.value)}
+         />
+         <button type="submit">Submit</button>
+      </form>
     </div>
   )
 }

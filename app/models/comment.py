@@ -1,6 +1,8 @@
 from .db import db
 from .user import User
 from .clip import Clip
+from sqlalchemy.sql import func
+
 
 class Comment(db.Model):
   __tablename__='comments'
@@ -9,4 +11,14 @@ class Comment(db.Model):
   userId = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
   clipId = db.Column(db.Integer, db.ForeignKey('clips.id'), nullable=False)
   description = db.Column(db.Text, nullable=False)
-  createdAt = db.Column(db.DateTime, nullable=False)
+  createdAt = db.Column(db.DateTime(timezone=True), nullable=False, server_default=func.now())
+
+
+  def to_dict(self):
+    return {
+      "id": self.id,
+      "userId": self.userId,
+      "clipId": self.clipId,
+      "description": self.description,
+      "createdAt": self.createdAt
+    }

@@ -1,5 +1,5 @@
 from flask import Blueprint, request
-from app.models import db, Clip, Like
+from app.models import db, Clip, Like, Comment
 from flask_login import current_user, login_required
 
 clip_routes = Blueprint('clips', __name__)
@@ -27,4 +27,18 @@ def clip_unlike(likeId):
   like = Like.query.get(likeId)
   db.session.delete(like)
   db.session.commit()
-  return {"like": None}
+  return
+
+@clip_routes.route('/<id>/comments', methods=["POST"])
+@login_required
+def clip_comment(id):
+  data = request.json
+
+  clipComment = Comment(
+    userId=current_user.id,
+    clipId=id,
+    description=data['description']
+  )
+  db.session.add(clipComment)
+  db.session.commit()
+  return clipComment.to_dict()

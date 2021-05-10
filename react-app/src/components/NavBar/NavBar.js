@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import LogoutButton from '../auth/LogoutButton';
+import pic from '../../images/clipit_2-1.png'
 import './NavBar.css'
 
 
@@ -10,9 +11,9 @@ const NavBar = () => {
 
   return (
     <nav>
-        <div>
-          <Link to="/" exact={true} activeClassName="active">
-            Home
+        <div className='homeContainer'>
+          <Link to='/'>
+            <img className='navBarHome' src={pic}></img>
           </Link>
         </div>
       <div className='navContainer'>
@@ -21,10 +22,10 @@ const NavBar = () => {
         </div>
         <div className="dropdown">
           <button className='dropbtn'>{loggedInUser[0].toUpperCase()}</button>
-          <div className="dropdown-content">
-            <a href={`/profile/${loggedInUser}`}>Profile</a>
-            <LogoutButton/>
-          </div>
+            <div className="dropdown-content">
+              <a href={`/profile/${loggedInUser}`}>Profile</a>
+              <LogoutButton/>
+            </div>
         </div>
       </div>
     </nav>

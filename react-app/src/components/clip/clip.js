@@ -11,9 +11,7 @@ function Clip() {
   const clip = useSelector(state => state.clipReducer.clipDict)
   const user = useSelector(state => state.session.user)
   const userId = user.id
-  const likesOnAClip = clip.like
-
-  console.log(clip.likes,"likessssss")
+  const likesOnAClip = clip.likes
 
   useEffect(() => {
     (async () => {
@@ -27,14 +25,15 @@ function Clip() {
   }
 
   const yourLike = () => {
-   if(likesOnAClip.length) {likesOnAClip.map((like) => {
-     if (like.userId === userId) {
-      return like.id
+    if (likesOnAClip.length > 0) {
+      for (let i = 0; i < likesOnAClip.length; i++) {
+        if(likesOnAClip[i].userId === userId) {
+          return likesOnAClip[i].id
         }
-      })
-    }
-    else {
-      return null;
+        else {
+          return null
+        }
+      }
     }
   }
 
@@ -43,6 +42,24 @@ function Clip() {
     const likeId = yourLike();
     dispatch(unlikeClip(likeId, id))
 
+  }
+
+  const likeChecked = () => {
+    if (likesOnAClip.length > 0) {
+      for (let i = 0; i < likesOnAClip.length; i++) {
+        if(likesOnAClip[i].userId === userId) {
+          return(
+            <button onClick={unLikeClip}>unLike</button>
+
+          )
+        }
+      }
+    }
+    else {
+      return(
+        <button onClick={clipLike}>Like</button>
+      )
+    }
   }
 
 
@@ -55,11 +72,8 @@ function Clip() {
       </h3>
       <h6>uploaded on:{clip.createAt}</h6>
       <div>
-        <button onClick={clipLike}>Like</button>
-        <button onClick={unLikeClip}>unLike</button>
-
+        {likeChecked()}
       </div>
-
     </div>
   )
 }

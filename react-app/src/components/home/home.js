@@ -20,7 +20,6 @@ function AllClip() {
     <div className='homePageContainer'>
       <div className='homeInnerContainer'>
       <h2 className='homeTitle'>ClipIt Highlights!</h2>
-      {console.log("HELLOOOOOOOOOOOO")}
        {clipsArray.length ? clipsArray.map((clip,i) => {
           return (
             <div className='thumbNails' key={i}>

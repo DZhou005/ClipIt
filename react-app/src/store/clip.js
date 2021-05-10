@@ -16,6 +16,25 @@ export const clipInfo = (id) => async (dispatch) => {
   }
 }
 
+export const likeClip = (userId, clipId) => async (dispatch) => {
+  const res = await fetch(`/api/clips/${clipId}/like`, {
+    method: "POST",
+    userId,
+    clipId
+  })
+  const data = await res.json()
+}
+
+export const unlikeClip = (clipId, likeId) => async dispatch => {
+  const res = await fetch(`/api/clips/like/${likeId}`, {
+    method: "DELETE",
+    likeId,
+    clipId,
+  })
+  const data = await res.json()
+  return
+}
+
 const initialState = {
   clipDict: {
     id:'',
@@ -23,7 +42,8 @@ const initialState = {
     description:'',
     clipUrl:'',
     user:[],
-    createdAt:''
+    createdAt:'',
+    likes:[]
   }
 }
 

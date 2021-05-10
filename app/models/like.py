@@ -1,5 +1,4 @@
 from .db import db
-from .user import User
 from .clip import Clip
 
 class Like(db.Model):
@@ -8,4 +7,13 @@ class Like(db.Model):
   id = db.Column(db.Integer, primary_key=True)
   userId = db.Column(db.Integer, db.ForeignKey('users.id'), nullable = False)
   clipId = db.Column(db.Integer, db.ForeignKey('clips.id'), nullable = False)
-  createdAt = db.Column(db.DateTime, nullable=False)
+  user = db.relationship("User", back_populates="likes")
+  clips = db.relationship("Clip", back_populates="likes")
+
+
+  def to_dict(self):
+    return {
+      "id": self.id,
+      "userId": self.userId,
+      "clipId": self.clipId
+    }

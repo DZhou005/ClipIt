@@ -1,0 +1,48 @@
+.uploadFormContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top:-8rem;
+  height: 100vh;
+}
+.uploadForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgb(113, 233, 233);
+}
+
+.uploadGreeting{
+  color:rgb(113, 233, 233);
+  margin-bottom: 10rem;
+}
+
+.fileUpload{
+  margin-left: 5rem;
+   margin-top: 1rem;
+   margin-bottom: 3rem;
+   color:rgb(113, 233, 233);
+}
+
+.uploadTitle{
+  border: 1px solid rgb(113, 233, 233);
+  width:20rem;
+  height:1.5rem;
+
+}
+
+.uploadDescription{
+  border: 1px solid rgb(113, 233, 233);
+  width:20rem;
+  height:5rem;
+  margin-top: 3rem;
+}
+
+.uploadSubmit{
+  color:white;
+  background-color: rgb(113, 233, 233);
+  border:none;
+  margin-top: 2rem;
+}

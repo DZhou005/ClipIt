@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+  import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { allClipInfo } from '../../store/home';
@@ -23,7 +23,7 @@ function AllClip() {
        {clipsArray.length ? clipsArray.map((clip,i) => {
           return (
             <div className='thumbNails' key={i}>
-              <Link to={`/clips/${clip.id}`}>
+              <Link className="thumbNaildescrip" to={`/clips/${clip.id}`}>
                 <video className='homeThumbNails' src={clip.clipUrl}>
                 </video>
                 <h4 className="thumbTitle">{clip.title}</h4>

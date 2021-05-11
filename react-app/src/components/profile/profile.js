@@ -22,7 +22,7 @@ function Profile() {
       {allClipsArray.map((clip,i) => {
         return (
           <div key={i}>
-            <Link to={`/clips/${clip.id}`}>
+            <Link className="profileThumbNailDesc" to={`/clips/${clip.id}`}>
               <video className='profileThumbNails' src={clip.clipUrl}>
               </video>
               <h4 className="profileThumbNailTitle">{clip.title}</h4>

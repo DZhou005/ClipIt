@@ -25,6 +25,9 @@
 .thumbTitle{
   margin-left: 13rem;
   max-width: 20rem;
+  color:rgb(113, 233, 233);
+}
 
-
+.thumbNaildescrip{
+  text-decoration: none;
 }

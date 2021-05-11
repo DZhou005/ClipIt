@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { useHistory } from "react-router-dom";
+import "./upload.css"
 
 
 const UploadClip = () => {
@@ -44,29 +45,35 @@ const UploadClip = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input
-              type="file"
-              accept="clip/*"
-              onChange={updateClip}
-            />
-            <textarea
-            type='text'
-            placeholder='Title'
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            />
-            <textarea
-            type='text'
-            placeholder='Description'
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-            />
+        <div className="uploadFormContainer" >
+                <h1 className="uploadGreeting">Upload your clip here!</h1>
+                <form className="uploadForm" onSubmit={handleSubmit}>
+                    <input
+                    type="file"
+                    accept="clip/*"
+                    onChange={updateClip}
+                    className="fileUpload"
+                    />
+                    <textarea
+                    type='text'
+                    placeholder='Title'
+                    value={title}
+                    className="uploadTitle"
+                    onChange={(e) => setTitle(e.target.value)}
+                    />
+                    <textarea
+                    type='text'
+                    placeholder='Description'
+                    className="uploadDescription"
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                    />
 
-            <button type="submit">Submit</button>
-            {(clipLoading)&& <p>Loading...</p>}
-        </form>
-    )
+                    <button className="uploadSubmit" type="submit">Submit</button>
+                    {(clipLoading)&& <p>Loading...</p>}
+                </form>
+            </div>
+        )
 }
 
 export default UploadClip;

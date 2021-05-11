@@ -80,12 +80,12 @@ function Clip() {
   return (
     <div className="clipPageContainer">
       <h2 className='clipPageTitle'>{clip.title}</h2>
-      <video src={clip.clipUrl} controls type="video/mp4"/>
+      <video className="clipVideo" src={clip.clipUrl} controls type="video/mp4"/>
       <h5>uploaded on:{clip.createAt}</h5>
       <h4 className="likesBtn">{likeChecked()}&nbsp;&nbsp;Likes: {likesOnAClip?.length}</h4>
-      <h2 className="clipProfileLink">
-        <Link className="clipDescriptionLink" to={`/profile/${clip.user?.username}`}>{clip.user?.username}</Link>:
-      </h2>
+      <div className="clipProfileLink">
+        <Link className="clipDescriptionLink" to={`/profile/${clip.user?.username}`}>{clip.user?.username?.charAt(0).toUpperCase()}</Link> <Link className="clipUserUpload" to={`/profile/${clip.user?.username}`}>{clip.user?.username}:</Link>
+      </div>
       <h4 className="clipDescription">
         {clip.description}
       </h4>
@@ -96,14 +96,15 @@ function Clip() {
         placeholder="write your comment here"
         onChange={(e) => setDescription(e.target.value)}
          />
-         <button type="submit">Submit</button>
+        <button className="commentSubmit" type="submit">Submit</button>
       </form>
+      <h3 className="clipComments">Comments</h3>
       <div>
         {commentsArray?.map((comment,i) => {
           return (
-            <h2 key={i}>
-              <Link className="clipDescriptionLink" to={`/profile/${comment.userName}`}>{comment.userName}</Link>:{comment.description}
-            </h2>
+            <div key={i}>
+              <Link className="clipCommentLink" to={`/profile/${comment.userName}`}>{comment.userName.charAt(0).toUpperCase()}</Link><Link className="clipUserUpload" to={`/profile/${comment.userName}`}>{comment.userName}:</Link> <h4 className="commentDescription">{comment.description}</h4>
+            </div>
           )
         })}
       </div>

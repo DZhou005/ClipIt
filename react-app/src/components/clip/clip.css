@@ -15,8 +15,10 @@
 }
 
 .clipPageTitle{
+  display:flex;
+  justify-content: center;
   color:rgb(113, 233, 233);
-  width: 15rem;
+  width: 25rem;
   overflow: none;
 }
 
@@ -83,7 +85,7 @@
   justify-content: flex-start;
   text-decoration: none;
   margin-left:3rem;
-  margin-top: -1.5rem;
+  margin-top: -1.2rem;
   font-size:large;
 
 }

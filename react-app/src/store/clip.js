@@ -42,11 +42,10 @@ export const commentOnClip = (userId, clipId, description, username) => async (d
   const data = await res.json()
 }
 
-export const unlikeClip = (clipId, likeId) => async dispatch => {
+export const unlikeClip = (likeId) => async dispatch => {
   const res = await fetch(`/api/clips/like/${likeId}`, {
     method: "DELETE",
-    likeId,
-    clipId,
+    likeId
   })
   const data = await res.json()
   return "unliked"

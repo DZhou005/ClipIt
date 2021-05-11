@@ -10,13 +10,11 @@ function Clip() {
   let { id } = useParams();
   const clip = useSelector(state => state.clipReducer.clipDict)
   const user = useSelector(state => state.session.user)
-  const userId = user.id
-  const likesOnAClip = clip.likes
-  const username = user.username
+  const userId = user?.id
+  const likesOnAClip = clip?.likes
+  const username = user?.username
   const commentsArray = useSelector(state => state?.clipReducer?.commentDict)
   const [description, setDescription] = useState('')
-
-  console.log(commentsArray)
 
 
   useEffect(() => {
@@ -39,13 +37,10 @@ function Clip() {
   }
 
   const yourLike = () => {
-    if (likesOnAClip.length > 0) {
+    if (likesOnAClip?.length > 0) {
       for (let i = 0; i < likesOnAClip.length; i++) {
         if(likesOnAClip[i].userId === userId) {
           return likesOnAClip[i].id
-        }
-        else {
-          return null
         }
       }
     }
@@ -54,15 +49,15 @@ function Clip() {
 
   const unLikeClip = async () => {
     const likeId = yourLike();
-    dispatch(unlikeClip(id, likeId))
+    dispatch(unlikeClip(likeId))
     dispatch(clipInfo(id))
 
   }
 
   const likeChecked = () => {
     if (likesOnAClip?.length > 0) {
-      for (let i = 0; i < likesOnAClip.length; i++) {
-        if(likesOnAClip[i].userId === userId) {
+      for (let i = 0; i < likesOnAClip?.length; i++) {
+        if(likesOnAClip[i]?.userId === userId) {
           return(
             <div className="fas fa-heart liked" onClick={unLikeClip}></div>
 

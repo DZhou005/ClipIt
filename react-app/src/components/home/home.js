@@ -20,7 +20,7 @@ function AllClip() {
     <div className='homePageContainer'>
       <div className='homeInnerContainer'>
       <h2 className='homeTitle'>ClipIt Highlights!</h2>
-       {clipsArray.length ? clipsArray.map((clip,i) => {
+       {clipsArray.length ? clipsArray.slice(0).reverse().map((clip,i) => {
           return (
             <div className='thumbNails' key={i}>
               <Link className="thumbNaildescrip" to={`/clips/${clip.id}`}>

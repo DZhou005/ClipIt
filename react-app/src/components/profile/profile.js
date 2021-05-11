@@ -19,7 +19,7 @@ function Profile() {
   return (
     <div className='profileContainer'>
       <h1 className='profileTitle'>{name}'s clips</h1>
-      {allClipsArray.map((clip,i) => {
+      {allClipsArray.slice(0).reverse().map((clip,i) => {
         return (
           <div key={i}>
             <Link className="profileThumbNailDesc" to={`/clips/${clip.id}`}>

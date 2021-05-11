@@ -5,3 +5,42 @@
 .like{
   color:rgb(113, 233, 233);
 }
+
+.clipPageContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.clipPageTitle{
+  color:rgb(113, 233, 233);
+  width: 15rem;
+  overflow: none;
+}
+
+.clipDescription{
+  margin-top: -.5rem;
+}
+
+.clipProfileLink{
+  margin-top: -.7rem;
+}
+
+.clipDescriptionLink{
+  color:rgb(113, 233, 233);
+}
+
+.likesBtn{
+  margin-left:30rem;
+  margin-top: -2.5rem;
+}
+
+.commentBox{
+  margin-top:5rem;
+  width:15rem;
+  overflow: scroll;
+  /* height:2rem; */
+
+}

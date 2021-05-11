@@ -12,7 +12,11 @@ function Clip() {
   const user = useSelector(state => state.session.user)
   const userId = user.id
   const likesOnAClip = clip.likes
+  const username = user.username
+  const commentsArray = useSelector(state => state?.clipReducer?.commentDict)
   const [description, setDescription] = useState('')
+
+  console.log(commentsArray)
 
 
   useEffect(() => {
@@ -23,14 +27,15 @@ function Clip() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(commentOnClip(userId, id, description))
+    dispatch(commentOnClip(userId, id, description, username))
     setDescription('')
     dispatch(clipInfo(id))
   }
 
 
   const clipLike = async () => {
-    dispatch(likeClip(userId, id))
+    await dispatch(likeClip(userId, id))
+    dispatch(clipInfo(id))
   }
 
   const yourLike = () => {
@@ -50,6 +55,7 @@ function Clip() {
   const unLikeClip = async () => {
     const likeId = yourLike();
     dispatch(unlikeClip(id, likeId))
+    dispatch(clipInfo(id))
 
   }
 
@@ -64,33 +70,43 @@ function Clip() {
         }
       }
     }
-    else {
       return(
         <div className="far fa-heart like" onClick={clipLike}></div>
-      )
-    }
+       )
   }
 
 
+
   return (
-    <div>
-      <h2>{clip.title}</h2>
+    <div className="clipPageContainer">
+      <h2 className='clipPageTitle'>{clip.title}</h2>
       <video src={clip.clipUrl} controls type="video/mp4"/>
-      <h3>
-        <Link to={`/profile/${clip.user?.username}`}>{clip.user?.username}</Link>: {clip.description}
-      </h3>
-      <h6>uploaded on:{clip.createAt}</h6>
-      <div>
-        {likeChecked()}
-      </div>
+      <h5>uploaded on:{clip.createAt}</h5>
+      <h4 className="likesBtn">{likeChecked()}&nbsp;&nbsp;Likes: {likesOnAClip?.length}</h4>
+      <h2 className="clipProfileLink">
+        <Link className="clipDescriptionLink" to={`/profile/${clip.user?.username}`}>{clip.user?.username}</Link>:
+      </h2>
+      <h4 className="clipDescription">
+        {clip.description}
+      </h4>
       <form onSubmit={handleSubmit}>
         <input type="text"
+        className='commentBox'
         value={description}
-        placeholder="comment"
+        placeholder="write your comment here"
         onChange={(e) => setDescription(e.target.value)}
          />
          <button type="submit">Submit</button>
       </form>
+      <div>
+        {commentsArray?.map((comment,i) => {
+          return (
+            <h2 key={i}>
+              <Link className="clipDescriptionLink" to={`/profile/${comment.userName}`}>{comment.userName}</Link>:{comment.description}
+            </h2>
+          )
+        })}
+      </div>
     </div>
   )
 }

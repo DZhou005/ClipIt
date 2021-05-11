@@ -8,10 +8,13 @@ clip_routes = Blueprint('clips', __name__)
 @login_required
 def profile_user(id):
   clip = Clip.query.filter_by(id=id).first()
+  comments = Comment.query.filter_by(clipId=id).all()
 
   return {
-    "clipDict": clip.to_dict()
+    "clipDict": clip.to_dict(),
+    "commentDict": [comment.to_dict() for comment in comments]
   }
+
 
 @clip_routes.route('/<id>/like', methods=['POST'])
 @login_required
@@ -37,7 +40,8 @@ def clip_comment(id):
   clipComment = Comment(
     userId=current_user.id,
     clipId=id,
-    description=data['description']
+    description=data['description'],
+    userName=current_user.username
   )
   db.session.add(clipComment)
   db.session.commit()

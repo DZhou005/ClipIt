@@ -23,9 +23,10 @@ export const likeClip = (userId, clipId) => async (dispatch) => {
     clipId
   })
   const data = await res.json()
+  return "liked"
 }
 
-export const commentOnClip = (userId, clipId, description) => async (dispatch) => {
+export const commentOnClip = (userId, clipId, description, username) => async (dispatch) => {
   const res = await fetch(`/api/clips/${clipId}/comments`, {
     method: "POST",
     headers: {
@@ -35,10 +36,10 @@ export const commentOnClip = (userId, clipId, description) => async (dispatch) =
       userId,
       clipId,
       description,
+      username,
     }),
   });
   const data = await res.json()
-  return
 }
 
 export const unlikeClip = (clipId, likeId) => async dispatch => {
@@ -48,6 +49,7 @@ export const unlikeClip = (clipId, likeId) => async dispatch => {
     clipId,
   })
   const data = await res.json()
+  return "unliked"
 }
 
 const initialState = {

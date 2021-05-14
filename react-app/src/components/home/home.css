@@ -1,11 +1,11 @@
 .homePageContainer{
   display:flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .homeTitle{
-  margin-left: 12.5rem;
   color: rgb(113, 233, 233);
 }
 

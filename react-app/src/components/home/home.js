@@ -7,7 +7,6 @@ import './home.css'
 function AllClip() {
   const dispatch = useDispatch();
   const clipsArray = useSelector(state => state.allClipReducer.clipDict);
-  const clips = useSelector(state => state.allClipReducer.clipDict);
   const [searchTerm, setSearchTerm] = useState('');
 
 

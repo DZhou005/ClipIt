@@ -7,8 +7,8 @@ import './profile.css'
 function Profile() {
   const dispatch = useDispatch();
   let { name } = useParams();
-  const allClipsArray = useSelector(state => state.profileReducer.userDict.clips)
-  const user = useSelector(state => state.session.user)
+  const allClipsArray = useSelector(state => state.profileReducer.userDict.clips);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     (async () => {
@@ -18,8 +18,16 @@ function Profile() {
 
   return (
     <div className='profileContainer'>
+      <input className="profileSearch" type="text" placeholder="Search..." onChange={event => {setSearchTerm(event.target.value)}}/>
       <h1 className='profileTitle'>{name}'s clips</h1>
-      {allClipsArray.slice(0).reverse().map((clip,i) => {
+      {allClipsArray.slice(0).reverse().filter((val) => {
+        if(searchTerm === "") {
+          return val
+        }
+        else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+          return val
+        }
+      }).map((clip,i) => {
         return (
           <div key={i}>
             <Link className="profileThumbNailDesc" to={`/clips/${clip.id}`}>

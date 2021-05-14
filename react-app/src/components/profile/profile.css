@@ -26,3 +26,12 @@
 .profileThumbNailDesc{
   text-decoration: none ;
 }
+
+.profileSearch{
+  position: absolute;
+  top: 1rem;
+  left: 34.5rem;
+  width: 20rem;
+  height: 1rem;
+  text-align: center;
+}

@@ -43,7 +43,7 @@ const SignUpForm = () => {
     <div className='signUpFormContainer'>
       <form onSubmit={onSignUp}>
         <div className='signUpUsername'>
-          <h1>Welcome To ClipIt</h1>
+          <h1>Welcome To Clip It</h1>
           <label>UserName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
           <input
             type="text"

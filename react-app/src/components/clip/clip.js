@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 import { clipInfo, likeClip, unlikeClip, commentOnClip} from '../../store/clip';
@@ -27,13 +27,13 @@ function Clip() {
     e.preventDefault();
     dispatch(commentOnClip(userId, id, description, username))
     setDescription('')
-    dispatch(clipInfo(id))
+    await dispatch(clipInfo(id))
   }
 
 
   const clipLike = async () => {
-    await dispatch(likeClip(userId, id))
-    dispatch(clipInfo(id))
+    dispatch(likeClip(userId, id))
+    await dispatch(clipInfo(id))
   }
 
   const yourLike = () => {
@@ -50,7 +50,7 @@ function Clip() {
   const unLikeClip = async () => {
     const likeId = yourLike();
     dispatch(unlikeClip(likeId))
-    dispatch(clipInfo(id))
+    await dispatch(clipInfo(id))
 
   }
 

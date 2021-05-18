@@ -51,6 +51,20 @@ export const unlikeClip = (likeId) => async dispatch => {
   return "unliked"
 }
 
+// export const editClip = (id) => async dispatch => {
+//   const res = await fetch(`/edit/${id}`, {
+//     method: "PATCH",
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify({
+//       title,
+//       description,
+//     }),
+//   });
+//   const data = await res.json()
+// }
+
 const initialState = {
   clipDict: {
     id:'',

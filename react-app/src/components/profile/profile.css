@@ -1,5 +1,15 @@
 .profileTitle{
   color:rgb(113, 233, 233);
+  display: flex;
+  justify-content: center;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: italic;
+  background-color: rgb(243, 241, 241);
+  width:100%;
+}
+.profileInnerContainer{
+  display:flex;
+  flex-direction: row;
 }
 
 .profileContainer{
@@ -10,15 +20,17 @@
 }
 
 .profileThumbNails{
-  width: 35rem;
-  margin-top:4rem;
+  width: 20rem;
+  margin-top: 2.5rem;
+  margin-left:2.5rem;
+  margin-right:2.5rem;
   border: 3px solid rgb(113, 233, 233);
-  margin-left: 1rem;
+
 }
 
 .profileThumbNailTitle{
-  margin-left: 13rem;
-  max-width: 20rem;
+  display:flex;
+  justify-content: center;
   color: rgb(113, 233, 233);
 
 }
@@ -35,4 +47,8 @@
   text-align: center;
   border: 1px solid rgb(113, 233, 233);
   color:rgb(113, 233, 233)
+}
+
+.profileSearch::placeholder{
+  color:rgb(113, 233, 233);
 }

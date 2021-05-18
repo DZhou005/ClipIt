@@ -15,11 +15,13 @@
 }
 
 .clipPageTitle{
-  display:flex;
-  justify-content: center;
   color:rgb(113, 233, 233);
-  width: 25rem;
-  overflow: none;
+  display: flex;
+  justify-content: center;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: italic;
+  background-color: rgb(243, 241, 241);
+  width:100%;
 }
 
 .clipDescription{

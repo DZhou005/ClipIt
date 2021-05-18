@@ -20,26 +20,28 @@ function Profile() {
     <div className='profileContainer'>
       <input className="profileSearch" type="text" placeholder="Search..." onChange={event => {setSearchTerm(event.target.value)}}/>
       <h1 className='profileTitle'>{name}'s clips</h1>
-      {allClipsArray.slice(0).reverse().filter((val) => {
-        if(searchTerm === "") {
-          return val
-        }
-        else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-          return val
-        }
-      }).map((clip,i) => {
-        return (
-          <div key={i}>
-            <Link className="profileThumbNailDesc" to={`/clips/${clip.id}`}>
-              <video className='profileThumbNails' src={clip.clipUrl}>
-              </video>
-              <h4 className="profileThumbNailTitle">{clip.title}</h4>
-            </Link>
-          </div>
-        )
+      <div className='profileInnerContainer'>
+        {allClipsArray.slice(0).reverse().filter((val) => {
+          if(searchTerm === "") {
+            return val
+          }
+          else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+            return val
+          }
+        }).map((clip,i) => {
+          return (
+            <div key={i}>
+              <Link className="profileThumbNailDesc" to={`/clips/${clip.id}`}>
+                <video className='profileThumbNails' src={clip.clipUrl}>
+                </video>
+                <h4 className="profileThumbNailTitle">{clip.title}</h4>
+              </Link>
+            </div>
+          )
 
 
-      })}
+        })}
+      </div>
     </div>
   );
 }

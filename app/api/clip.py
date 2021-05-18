@@ -15,6 +15,18 @@ def profile_user(id):
     "commentDict": [comment.to_dict() for comment in comments]
   }
 
+@clip_routes.route('/edit/<id>', methods=["PATCH"])
+@login_required
+def edit_clip(id):
+  # clip = Clip.query.filter_by(id=id).first()
+  title = request.form["title"]
+  description = request.form["description"]
+  update_clip = Clip(title=title, description=description)
+  db.session.add(update_clip)
+  db.session.commit()
+  return "update complete"
+
+
 
 @clip_routes.route('/<id>/like', methods=['POST'])
 @login_required

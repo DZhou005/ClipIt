@@ -1,12 +1,12 @@
 .homePageContainer{
   display:flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .homeInnerContainer{
   display:flex;
-  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 
@@ -20,12 +20,13 @@
   width: 20rem;
   margin-top:4rem;
   border: 3px solid rgb(113, 233, 233);
+  margin-left: 3.5rem;
 }
 
 .thumbTitle{
   display: flex;
   justify-content: center;
-  /* margin-left: 13rem; */
+  margin-left: 3.5rem;
   max-width: 20rem;
   color:rgb(113, 233, 233);
 }

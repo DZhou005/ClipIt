@@ -4,12 +4,13 @@
   justify-content: center;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-style: italic;
-  background-color: rgb(243, 241, 241);
-  width:100%;
 }
 .profileInnerContainer{
   display:flex;
   flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 6rem;
 }
 
 .profileContainer{
@@ -25,6 +26,7 @@
   margin-left:2.5rem;
   margin-right:2.5rem;
   border: 3px solid rgb(113, 233, 233);
+
 
 }
 

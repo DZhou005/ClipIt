@@ -33,7 +33,7 @@ function Clip() {
 
   const clipLike = async () => {
     dispatch(likeClip(userId, id))
-    await dispatch(clipInfo(id))
+    dispatch(clipInfo(id))
   }
 
   const yourLike = () => {
@@ -55,7 +55,7 @@ function Clip() {
   const unLikeClip = async () => {
     const likeId = yourLike();
     dispatch(unlikeClip(likeId))
-    await dispatch(clipInfo(id))
+    dispatch(clipInfo(id))
 
   }
 

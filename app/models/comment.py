@@ -9,7 +9,7 @@ class Comment(db.Model):
 
   id = db.Column(db.Integer, primary_key=True)
   userId = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
-  clipId = db.Column(db.Integer, db.ForeignKey('clips.id'), nullable=False)
+  clipId = db.Column(db.Integer, db.ForeignKey('clips.id', ondelete='CASCADE'), nullable=False)
   userName = db.Column(db.String, nullable=False)
   description = db.Column(db.Text, nullable=False)
   # createdAt = db.Column(db.DateTime(timezone=True), nullable=False, server_default=func.now())

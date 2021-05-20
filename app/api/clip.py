@@ -58,3 +58,11 @@ def clip_comment(id):
   db.session.add(clipComment)
   db.session.commit()
   return clipComment.to_dict()
+
+@clip_routes.route('/delete/<id>')
+@login_required
+def delete_clip(id):
+  clip = Clip.query.filter_by(id=id).first()
+  db.session.delete(clip)
+  db.session.commit()
+  return "deleted"

@@ -119,3 +119,12 @@
   height: 3rem;
   overflow-wrap:break-word;
 }
+
+.deleteButton{
+  color:rgb(113, 233, 233);
+  border: none;
+  background-color: white;
+  margin-left:1.5rem;
+}
+
+

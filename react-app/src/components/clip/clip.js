@@ -1,12 +1,13 @@
  import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, Link } from "react-router-dom";
-import { clipInfo, likeClip, unlikeClip, commentOnClip } from '../../store/clip';
+import { useParams, Link, useHistory} from "react-router-dom";
+import { clipInfo, likeClip, unlikeClip, commentOnClip, deleteClip } from '../../store/clip';
 import './clip.css'
 
 
 function Clip() {
   const dispatch = useDispatch();
+  const history = useHistory();
   let { id } = useParams();
   const clip = useSelector(state => state.clipReducer.clipDict)
   const user = useSelector(state => state.session.user)
@@ -45,6 +46,11 @@ function Clip() {
     }
   }
 
+  const clipDeleteButton = async () => {
+    dispatch(deleteClip(id))
+    dispatch(clipInfo(id))
+    history.push(`/`)
+  }
 
   const unLikeClip = async () => {
     const likeId = yourLike();
@@ -70,9 +76,12 @@ function Clip() {
   }
 
   const checkUser = () => {
-    if(clip?.user?.id === user.id) {
+    if(clip?.user?.id === user.id || user?.id === 2) {
       return (
-        <Link className="far fa-edit clipEditButton" to={`/edit/${id}`}></Link>
+        <div>
+          <Link className="far fa-edit clipEditButton" to={`/edit/${id}`}></Link>
+          <button className="fas fa-dumpster-fire deleteButton" onClick={clipDeleteButton}></button>
+        </div>
 
       )
     }

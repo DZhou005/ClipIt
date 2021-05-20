@@ -11,7 +11,7 @@ class Clip(db.Model):
   description = db.Column(db.Text)
   clipUrl = db.Column(db.String, nullable=False)
   user = db.relationship('User', back_populates='clips')
-  likes = db.relationship('Like', back_populates='clips')
+  likes = db.relationship('Like', back_populates='clips', cascade="all, delete", passive_deletes=True)
   createdAt = db.Column(db.DateTime(timezone=True), nullable=False, server_default=func.now())
 
   def to_dict(self):

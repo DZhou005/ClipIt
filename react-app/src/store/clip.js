@@ -1,9 +1,16 @@
 const ALL_CLIPS = 'ALL_CLIPS'
+const REMOVE_CLIP = 'REMOVE_CLIP'
 
 const getClips = (info) => ({
   type: ALL_CLIPS,
   payload: info
 })
+
+const removeClip = () => {
+  return {
+    type: REMOVE_CLIP
+  }
+}
 
 export const clipInfo = (id) => async (dispatch) => {
   const res = await fetch(`/api/clips/${id}`);
@@ -65,6 +72,11 @@ export const editClip = (id, title, description) => async dispatch => {
   const data = await res.json()
 }
 
+export const deleteClip = (id) => async dispatch => {
+  fetch(`/api/clips/delete/${id}`)
+  dispatch(removeClip(id))
+
+}
 const initialState = {
   clipDict: {
     id:'',

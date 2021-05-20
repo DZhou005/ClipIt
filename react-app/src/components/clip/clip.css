@@ -21,6 +21,12 @@
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-style: italic;
 }
+.clipEditButton{
+  text-decoration: none;
+  color:rgb(113, 233, 233);
+  border:none;
+  margin-bottom: 1rem;
+}
 
 .clipDescription{
   margin-top: 1rem;

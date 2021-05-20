@@ -1,7 +1,7 @@
  import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
-import { clipInfo, likeClip, unlikeClip, commentOnClip, editClip} from '../../store/clip';
+import { clipInfo, likeClip, unlikeClip, commentOnClip } from '../../store/clip';
 import './clip.css'
 
 
@@ -15,9 +15,6 @@ function Clip() {
   const username = user?.username
   const commentsArray = useSelector(state => state?.clipReducer?.commentDict)
   const [description, setDescription] = useState('')
-  // const [title, setTitle] = useState(clip.title)
-  // const [description, setDescription] = useState(clip.description)
-
 
   useEffect(() => {
     (async () => {
@@ -31,14 +28,6 @@ function Clip() {
     setDescription('')
     await dispatch(clipInfo(id))
   }
-
-  // const handleEdit = async (e) => {
-  //   e.preventDefault();
-  //   const formData = new FormData();
-  //   formData.append("title", title);
-  //   formData.append("description", description)
-  //   dispatch(editClip(id))
-  // }
 
 
   const clipLike = async () => {
@@ -80,33 +69,22 @@ function Clip() {
        )
   }
 
-  // const editButton = () => {
-  //   return (
-  //     <form onSubmit={handleEdit}>
-  //       <textarea
-  //       type='text'
-  //       placeholder='Title'
-  //       value={title}
-  //       className="uploadTitle"
-  //       onChange={(e) => setTitle(e.target.value)}
-  //       />
-  //       <textarea
-  //       type='text'
-  //       placeholder='Description'
-  //       className="uploadDescription"
-  //       value={description}
-  //       onChange={(e) => setDescription(e.target.value)}
-  //       />
-  //       <button type="submit"></button>
-  //     </form>
-  //   )
-  // }
+  const checkUser = () => {
+    if(clip?.user?.id === user.id) {
+      return (
+        <Link className="far fa-edit clipEditButton" to={`/edit/${id}`}></Link>
 
-
+      )
+    }
+    else {
+      return null
+    }
+  }
 
   return (
     <div className="clipPageContainer">
       <h2 className='clipPageTitle'>{clip.title}</h2>
+      {checkUser()}
       <video className="clipVideo" src={clip.clipUrl} controls type="video/mp4"/>
       <h5>uploaded on:{clip.createAt}</h5>
       <h4 className="likesBtn">{likeChecked()}&nbsp;&nbsp;Likes: {likesOnAClip?.length}</h4>

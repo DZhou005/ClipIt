@@ -1,0 +1,55 @@
+
+.editForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid rgb(113, 233, 233);
+  color:rgb(113, 233, 233);
+  width: 20.5rem;
+}
+.editContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 75vh;
+}
+
+.editTitle {
+  color:rgb(113, 233, 233);
+  display: flex;
+  justify-content: center;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: italic;
+}
+
+.editFormTitle{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width:20rem;
+  border: 1px solid rgb(113, 233, 233);
+
+}
+
+.editFormDescription{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width:20rem;
+  height:5rem;
+  border: 1px solid rgb(113, 233, 233);
+}
+.editFormSubmit {
+  margin-right: 1rem;
+  color:white;
+  background-color: rgb(113, 233, 233);
+  border:none;
+}
+.editFormCancel{
+  color:white;
+  background-color: rgb(113, 233, 233);
+  border:none;
+  text-decoration: none;
+  padding-left:.3rem;
+  padding-right:.3rem;
+}

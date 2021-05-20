@@ -13,6 +13,7 @@ import Upload from "./components/upload/upload"
 import Profile from "./components/profile/profile"
 import Clip from "./components/clip/clip"
 import AllClip from "./components/home/home"
+import Edit from "./components/edit/edit"
 
 function App() {
   // const [authenticated, setAuthenticated] = useState(false);
@@ -56,6 +57,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path="/users/:userId" exact={true}>
           <User />
+        </ProtectedRoute>
+        <ProtectedRoute path='/edit/:id' exact={true}>
+          <Edit />
         </ProtectedRoute>
         <ProtectedRoute path="/" exact={true}>
           <NavBar/>

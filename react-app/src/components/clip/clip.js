@@ -80,7 +80,7 @@ function Clip() {
       return (
         <div>
           <Link className="far fa-edit clipEditButton" to={`/edit/${id}`}></Link>
-          <button className="fas fa-dumpster-fire deleteButton" onClick={clipDeleteButton}></button>
+          <button className="far fa-trash-alt deleteButton" onClick={clipDeleteButton}></button>
         </div>
 
       )

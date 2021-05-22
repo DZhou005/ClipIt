@@ -19,6 +19,11 @@ const LoginForm = () => {
     }
   };
 
+  const demoSubmit = async (e) => {
+    setEmail('demo@aa.io')
+    setPassword('password')
+  }
+
   const updateEmail = (e) => {
     setEmail(e.target.value);
   };
@@ -62,6 +67,7 @@ const LoginForm = () => {
             />
           </div>
             <button className='loginFormSubmit' type="submit">Login</button>
+            <button type="submit" onClick={demoSubmit} className="demoSubmitButton">Demo</button>
         </div>
             <NavLink to='/sign-up' className='signupLink'>Don't have an account? Signup here</NavLink>
       </form>

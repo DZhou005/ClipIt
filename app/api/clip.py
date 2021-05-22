@@ -11,7 +11,7 @@ def profile_user(id):
   comments = Comment.query.filter_by(clipId=id).all()
 
   return {
-    "clipDict": clip.to_dict(),
+    "clipDict": clip.to_dict() if clip else {},
     "commentDict": [comment.to_dict() for comment in comments]
   }
 
@@ -42,7 +42,7 @@ def clip_unlike(likeId):
   like = Like.query.get(likeId)
   db.session.delete(like)
   db.session.commit()
-  return
+  return {}
 
 @clip_routes.route('/<id>/comments', methods=["POST"])
 @login_required
@@ -59,10 +59,10 @@ def clip_comment(id):
   db.session.commit()
   return clipComment.to_dict()
 
-@clip_routes.route('/delete/<id>')
+@clip_routes.route('/delete/<id>', methods=["DELETE"])
 @login_required
 def delete_clip(id):
   clip = Clip.query.filter_by(id=id).first()
   db.session.delete(clip)
   db.session.commit()
-  return "deleted"
+  return {}

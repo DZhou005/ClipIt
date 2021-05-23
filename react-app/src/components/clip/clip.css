@@ -129,4 +129,7 @@
 
 .commentDeleteButton{
   margin-bottom: 3rem;
+  color: rgb(113, 233, 233);
+  background-color: white;
+  border: none;
 }

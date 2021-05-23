@@ -94,6 +94,14 @@ function Clip() {
     }
   }
 
+  const checkCommentUser = (commentUser, commentId) => {
+    if(commentUser === userId || commentUser === 2) {
+      return (
+        <button className='far fa-trash-alt commentDeleteButton' onClick={() => asyncClipInfo(id,commentId)}></button>
+      )
+    }
+  }
+
   return (
     <div className="clipPageContainer">
       <h2 className='clipPageTitle'>{clip.title}</h2>
@@ -122,7 +130,7 @@ function Clip() {
           return (
             <div key={i}>
               <Link className="clipCommentLink" to={`/profile/${comment.userName}`}>{comment.userName.charAt(0).toUpperCase()}</Link><Link className="clipUserUpload" to={`/profile/${comment.userName}`}>{comment.userName}:</Link> <h4 className="commentDescription">{comment.description}</h4>
-              <button className='commentDeleteButton' onClick={() => asyncClipInfo(id,comment.id)}>Delete</button>
+              {checkCommentUser(comment?.userId, comment?.id)}
             </div>
           )
         })}

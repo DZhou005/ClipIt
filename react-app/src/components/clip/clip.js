@@ -1,7 +1,7 @@
  import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link, useHistory} from "react-router-dom";
-import { clipInfo, likeClip, unlikeClip, commentOnClip, deleteClip } from '../../store/clip';
+import { clipInfo, likeClip, unlikeClip, commentOnClip, deleteClip, editComment, deleteComment } from '../../store/clip';
 import './clip.css'
 
 
@@ -30,6 +30,10 @@ function Clip() {
     await dispatch(clipInfo(id))
   }
 
+ async function asyncClipInfo (id,commentId) {
+    await dispatch(deleteComment(commentId))
+    dispatch(clipInfo(id))
+  }
 
   const clipLike = async () => {
     dispatch(likeClip(userId, id))
@@ -118,6 +122,7 @@ function Clip() {
           return (
             <div key={i}>
               <Link className="clipCommentLink" to={`/profile/${comment.userName}`}>{comment.userName.charAt(0).toUpperCase()}</Link><Link className="clipUserUpload" to={`/profile/${comment.userName}`}>{comment.userName}:</Link> <h4 className="commentDescription">{comment.description}</h4>
+              <button className='commentDeleteButton' onClick={() => asyncClipInfo(id,comment.id)}>Delete</button>
             </div>
           )
         })}

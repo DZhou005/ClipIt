@@ -26,6 +26,13 @@ def edit_clip(id):
     "clipDict": clip.to_dict()
   }
 
+@clip_routes.route('/editComment/<id>', methods=["PATCH"])
+@login_required
+def eidt_comment(id):
+  comment = Comment.query.filter_by(id=id).first()
+  comment.description = request.get_json()['description']
+  db.session.commit()
+  return comment.to_dict()
 
 
 @clip_routes.route('/<id>/like', methods=['POST'])
@@ -41,6 +48,14 @@ def clip_like(id):
 def clip_unlike(likeId):
   like = Like.query.get(likeId)
   db.session.delete(like)
+  db.session.commit()
+  return {}
+
+@clip_routes.route('/delete/comment/<id>', methods=['DELETE'])
+@login_required
+def comment_delete(id):
+  comment = Comment.query.filter_by(id=id).first()
+  db.session.delete(comment)
   db.session.commit()
   return {}
 

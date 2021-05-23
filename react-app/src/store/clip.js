@@ -72,6 +72,19 @@ export const editClip = (id, title, description) => async dispatch => {
   const data = await res.json()
 }
 
+export const editComment = (id, description) => async dispatch => {
+  const res = await fetch(`/api/clips/editComment/${id}`, {
+    method: "PATCH",
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      description,
+    }),
+  });
+  const data = await res.json()
+}
+
 export const deleteClip = (id) => async dispatch => {
   const res = await fetch(`/api/clips/delete/${id}`, {
     method: "DELETE",
@@ -80,6 +93,16 @@ export const deleteClip = (id) => async dispatch => {
   const data = await res.json()
   return "deleted"
 }
+
+export const deleteComment = (id) => async dispatch => {
+  const res = await fetch(`/api/clips/delete/comment/${id}`, {
+    method: "DELETE",
+    id
+  })
+  const data = await res.json()
+  return "deleted"
+}
+
 const initialState = {
   clipDict: {
     id:'',

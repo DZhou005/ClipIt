@@ -114,7 +114,7 @@
 
 .commentDescription{
   margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   max-width: 45rem;
   height: 3rem;
   overflow-wrap:break-word;
@@ -125,4 +125,8 @@
   border: none;
   background-color: white;
   margin-left:1.5rem;
+}
+
+.commentDeleteButton{
+  margin-bottom: 3rem;
 }

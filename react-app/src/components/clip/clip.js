@@ -17,6 +17,7 @@ function Clip() {
   const commentsArray = useSelector(state => state?.clipReducer?.commentDict)
   const [description, setDescription] = useState('')
 
+
   useEffect(() => {
     (async () => {
       await dispatch(clipInfo(id))
@@ -95,7 +96,7 @@ function Clip() {
   }
 
   const checkCommentUser = (commentUser, commentId) => {
-    if(commentUser === userId || commentUser === 2) {
+    if(commentUser === userId || commentUser === 1) {
       return (
         <button className='far fa-trash-alt commentDeleteButton' onClick={() => asyncClipInfo(id,commentId)}></button>
       )
@@ -130,6 +131,7 @@ function Clip() {
           return (
             <div key={i}>
               <Link className="clipCommentLink" to={`/profile/${comment.userName}`}>{comment.userName.charAt(0).toUpperCase()}</Link><Link className="clipUserUpload" to={`/profile/${comment.userName}`}>{comment.userName}:</Link> <h4 className="commentDescription">{comment.description}</h4>
+              <Link to={`/comment/${comment.id}`}>Edit</Link>
               {checkCommentUser(comment?.userId, comment?.id)}
             </div>
           )

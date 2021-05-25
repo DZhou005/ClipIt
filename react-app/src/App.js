@@ -15,6 +15,7 @@ import Clip from "./components/clip/clip"
 import AllClip from "./components/home/home"
 import Edit from "./components/edit/edit"
 
+
 function App() {
   // const [authenticated, setAuthenticated] = useState(false);
   const dispatch = useDispatch()

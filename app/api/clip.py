@@ -32,7 +32,7 @@ def eidt_comment(id):
   comment = Comment.query.filter_by(id=id).first()
   comment.description = request.get_json()['description']
   db.session.commit()
-  return comment.to_dict()
+  return {"commentDict":comment.to_dict()}
 
 
 @clip_routes.route('/<id>/like', methods=['POST'])

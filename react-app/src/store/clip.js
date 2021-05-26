@@ -1,16 +1,11 @@
 const ALL_CLIPS = 'ALL_CLIPS'
-const REMOVE_CLIP = 'REMOVE_CLIP'
 
 const getClips = (info) => ({
   type: ALL_CLIPS,
   payload: info
 })
 
-// const removeClip = () => {
-//   return {
-//     type: REMOVE_CLIP
-//   }
-// }
+
 
 export const clipInfo = (id) => async (dispatch) => {
   const res = await fetch(`/api/clips/${id}`);

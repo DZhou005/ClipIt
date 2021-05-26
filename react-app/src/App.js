@@ -14,6 +14,7 @@ import Profile from "./components/profile/profile"
 import Clip from "./components/clip/clip"
 import AllClip from "./components/home/home"
 import Edit from "./components/edit/edit"
+import EditComment from "./components/editComment/editComment"
 
 
 function App() {
@@ -61,6 +62,9 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/edit/:id' exact={true}>
           <Edit />
+        </ProtectedRoute>
+        <ProtectedRoute path='/comment/:id' exact={true}>
+          <EditComment/>
         </ProtectedRoute>
         <ProtectedRoute path="/" exact={true}>
           <NavBar/>

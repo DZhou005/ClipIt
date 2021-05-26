@@ -133,3 +133,10 @@
   background-color: white;
   border: none;
 }
+
+.editCommentButton {
+  color: white;
+  background-color: rgb(113, 233, 233);
+  border: none;
+  margin-bottom: 2rem;
+}

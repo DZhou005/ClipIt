@@ -28,7 +28,7 @@ def edit_clip(id):
 
 @clip_routes.route('/editComment/<id>', methods=["PATCH"])
 @login_required
-def eidt_comment(id):
+def edit_comment(id):
   comment = Comment.query.filter_by(id=id).first()
   comment.description = request.get_json()['description']
   db.session.commit()

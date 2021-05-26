@@ -4,6 +4,7 @@ import session from './session'
 import profileReducer from './profile'
 import clipReducer from './clip'
 import allClipReducer from './home'
+import modalReducer from './modal'
 
 
 const rootReducer = combineReducers({
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
     profileReducer,
     clipReducer,
     allClipReducer,
+    modalReducer,
 });
 
 let enhancer;

@@ -111,7 +111,7 @@ function Clip() {
   const checkCommentEdit = (commentUser, commentId) => {
     if(commentUser === userId || commentUser === 1) {
       return (
-        <button className='editCommentButton' onClick={() => dispatch(showEdit(commentId))}>Edit</button>
+        <button className='far fa-edit commentEditButton' onClick={() => dispatch(showEdit(commentId))}></button>
       )
     }
   }

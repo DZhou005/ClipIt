@@ -16,18 +16,17 @@
 }
 
 .homeThumbNails{
-  display:flex;
-  flex-direction: row;
+  /* display:flex;
+  flex-direction: row; */
+  margin-top: 1rem;
   width: 20rem;
-  margin-top:4rem;
   border: 3px solid rgb(113, 233, 233);
 }
 
 .thumbTitle{
-  display: flex;
-  justify-content: center;
-  max-width: 20rem;
+  max-width: 12rem;
   color:rgb(113, 233, 233);
+  margin-left:6rem;
 }
 
 .thumbNaildescrip{
@@ -55,7 +54,7 @@
   justify-content: center;
   color:rgb(113, 233, 233);
   text-decoration: none;
-  margin-top: -1.5rem;
+  margin-top: 1rem;
 }
 
 .thumbNailUserNameCircle{
@@ -70,7 +69,12 @@
   padding-bottom: .8em;
   text-decoration: none;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin-left: 1.2rem;
-  bottom: 40px;
+  margin-right: 1rem;
 
+
+}
+
+.circleAndUserName{
+  display: flex;
+  justify-content: center;
 }

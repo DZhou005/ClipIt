@@ -47,6 +47,7 @@
   margin-right:10rem;
   text-decoration: none;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left: 6rem;
 }
 
 .likesBtn{
@@ -91,10 +92,20 @@
   display:flex;
   justify-content: flex-start;
   text-decoration: none;
-  margin-left:3rem;
+  margin-left:9rem;
   margin-top: -1.2rem;
   font-size:large;
 
+}
+
+.clipUserUploadComment{
+  color:rgb(113, 233, 233);
+  display:flex;
+  justify-content: flex-start;
+  text-decoration: none;
+  margin-left:3rem;
+  margin-top: -1.2rem;
+  font-size:large;
 }
 .clipCommentLink{
   background-color: rgb(113, 233, 233);
@@ -114,6 +125,7 @@
 
 .commentDescription{
   margin-top: 2rem;
+  margin-left:1rem;
   margin-bottom: 1rem;
   max-width: 45rem;
   height: 3rem;
@@ -128,7 +140,7 @@
 }
 
 .commentDeleteButton{
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
   color: rgb(113, 233, 233);
   background-color: white;
   border: none;
@@ -138,5 +150,10 @@
   color: rgb(113, 233, 233);
   background-color: white;
   border: none;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
+}
+
+.editAndDelete{
+  display: flex;
+  justify-content: center;
 }

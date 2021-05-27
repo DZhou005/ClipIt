@@ -143,14 +143,16 @@ function Clip() {
         {commentsArray?.map((comment,i) => {
           return (
             <div className="commentButtons" key={i}>
-              <Link className="clipCommentLink" to={`/profile/${comment.userName}`}>{comment.userName.charAt(0).toUpperCase()}</Link><Link className="clipUserUpload" to={`/profile/${comment.userName}`}>{comment.userName}:</Link> <h4 className="commentDescription">{comment.description}</h4>
-              {checkCommentEdit(comment?.userId, comment?.id)}
-              {commentModal === comment.id &&
-                <Modal onClose={() => dispatch(hideEdit(comment.id))}>
-                  <EditComment comment={comment}/>
-                </Modal>
-              }
-              {checkCommentUser(comment?.userId, comment?.id)}
+              <Link className="clipCommentLink" to={`/profile/${comment.userName}`}>{comment.userName.charAt(0).toUpperCase()}</Link><Link className="clipUserUploadComment" to={`/profile/${comment.userName}`}>{comment.userName}:</Link> <h4 className="commentDescription">{comment.description}</h4>
+              <div className="editAndDelete">
+                {checkCommentEdit(comment?.userId, comment?.id)}
+                {commentModal === comment.id &&
+                  <Modal onClose={() => dispatch(hideEdit(comment.id))}>
+                    <EditComment comment={comment}/>
+                  </Modal>
+                }
+                {checkCommentUser(comment?.userId, comment?.id)}
+              </div>
             </div>
           )
         })}

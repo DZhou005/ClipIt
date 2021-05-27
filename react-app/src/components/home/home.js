@@ -33,13 +33,16 @@ function AllClip() {
         }).map((clip,i) => {
             return (
               <div className='thumbNails' key={i}>
-                <Link className="thumbNaildescrip" to={`/clips/${clip.id}`}>
-                  <video className='homeThumbNails' src={clip.clipUrl}>
-                  </video>
-                  <h4 className="thumbTitle"> {clip.title}</h4>
-                </Link>
-                <Link className="thumbNailUserNameCircle" to={`/profile/${clip.user.username}`}>{clip.user.username.charAt(0).toUpperCase()}</Link>
-                <Link className='thumbNailUserName' to={`/profile/${clip.user.username}`}>{clip.user.username}</Link>
+                <div className="circleAndUserName">
+                    <Link className="thumbNailUserNameCircle" to={`/profile/${clip.user.username}`}>{clip.user.username.charAt(0).toUpperCase()}</Link>
+                    <Link className='thumbNailUserName' to={`/profile/${clip.user.username}`}>{clip.user.username}</Link>
+                  </div>
+                  <Link className="thumbNaildescrip" to={`/clips/${clip.id}`}>
+                    <video className='homeThumbNails' src={clip.clipUrl}>
+                    </video>
+                    <h4 className="thumbTitle"> {clip.title}</h4>
+                  </Link>
+
               </div>
             )
           })

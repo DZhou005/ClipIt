@@ -139,7 +139,7 @@ function Clip() {
         <button className="commentSubmit" type="submit">Submit</button>
       </form>
       <h3 className="clipComments">Comments</h3>
-      <div>
+      <div className='commentsContainer'>
         {commentsArray?.map((comment,i) => {
           return (
             <div className="commentButtons" key={i}>

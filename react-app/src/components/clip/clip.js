@@ -31,9 +31,9 @@ function Clip() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(commentOnClip(userId, id, description, username))
+    await dispatch(commentOnClip(userId, id, description, username))
     setDescription('')
-    await dispatch(clipInfo(id))
+    dispatch(clipInfo(id))
   }
 
  async function asyncClipInfo (id,commentId) {

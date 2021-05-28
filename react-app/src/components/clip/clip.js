@@ -57,7 +57,7 @@ function Clip() {
   }
 
   const clipDeleteButton = async () => {
-    dispatch(deleteClip(id))
+    await dispatch(deleteClip(id))
     dispatch(clipInfo(id))
     history.push(`/`)
   }

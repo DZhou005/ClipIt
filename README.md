@@ -13,14 +13,14 @@
   
 ## Technology Used
  
--Python
--JavaScript
--CSS
--React
--Redux
--Flask
--SQLAlchemy
--Amazon Web Services
--Postgres
+- Python
+- JavaScript
+- CSS
+- React
+- Redux
+- Flask
+- SQLAlchemy
+- Amazon Web Services
+- Postgres
 
 

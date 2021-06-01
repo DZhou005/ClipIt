@@ -25,3 +25,6 @@
 
 ## Login View:
 ![loginpageClipIt](https://user-images.githubusercontent.com/74795454/120250888-8fb4a280-c234-11eb-83be-067199dabd89.PNG)
+
+## Home View:
+![ClipItLinkedin](https://user-images.githubusercontent.com/74795454/120250924-aeb33480-c234-11eb-872b-e87dbd7ca302.PNG)

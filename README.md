@@ -1,2 +1,2 @@
 # Clip It
-[Live site](https://http://clipit1.herokuapp.com/)
+[Live site](http://clipit1.herokuapp.com/)

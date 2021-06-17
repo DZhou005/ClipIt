@@ -5,7 +5,6 @@
  - [Database Schema](https://github.com/DZhou005/ClipIt/wiki/Database-Schema)
  - [Frontend Routes](https://github.com/DZhou005/ClipIt/wiki/Frontend-Routes)
  - [MVP Feature List](https://github.com/DZhou005/ClipIt/wiki/MVP-Feature-List)
- - [Wireframe](https://github.com/DZhou005/ClipIt/wiki/Wireframe)
  - [API Documentation](https://github.com/DZhou005/ClipIt/wiki/Api-Documentation)
 
 ## Project Summary

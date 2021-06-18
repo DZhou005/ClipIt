@@ -1,9 +1,11 @@
 .liked{
   color: rgb(113, 233, 233);
+  cursor: pointer;
 }
 
 .like{
   color:rgb(113, 233, 233);
+  cursor: pointer;
 }
 
 .clipPageContainer{

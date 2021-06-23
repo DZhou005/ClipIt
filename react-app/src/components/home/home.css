@@ -16,17 +16,16 @@
 }
 
 .homeThumbNails{
-  /* display:flex;
-  flex-direction: row; */
   margin-top: 1rem;
   width: 20rem;
-  border: 3px solid #DBE6FD;
+  border: 3px solid #2978B5;
 }
 
 .thumbTitle{
-  max-width: 12rem;
-  color:#DBE6FD;
-  margin-left:6rem;
+  display: flex;
+  justify-content: center;
+  max-width: 20rem;
+  color:#2978B5;
 }
 
 .thumbNaildescrip{
@@ -40,26 +39,26 @@
   width: 20rem;
   height: 1rem;
   text-align: center;
-  border: 1px solid #DBE6FD;
-  color:#DBE6FD
+  border: 1px solid #2978B5;
+  color:#2978B5
 
 }
 
 .homeSearch::placeholder{
-  color:#DBE6FD
+  color:#2978B5
 }
 
 .thumbNailUserName{
   display: flex;
   justify-content: center;
-  color:#DBE6FD;
+  color:#2978B5;
   text-decoration: none;
   margin-top: 1rem;
 }
 
 .thumbNailUserNameCircle{
   position: relative;
-  background-color: #DBE6FD;
+  background-color: #2978B5;
   color: white;
   border-radius: 50%;
   border:none;

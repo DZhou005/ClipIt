@@ -1,13 +1,15 @@
 .navContainer {
   display: flex;
   justify-content: flex-end;
-  border-bottom: 2px solid #DBE6FD;
+  border-bottom: 2px solid #2978B5;
   height: 2.2rem;
   background-color: white;
+  margin-top:0;
 
 }
+
 .dropbtn {
-  background-color: #DBE6FD;
+  background-color: #2978B5;
   color: white;
   border-radius: 50%;
   width: 2rem;
@@ -49,7 +51,7 @@
 .dropdown:hover .dropdown-content {display: block;}
 
 .uploadButton{
-  color: #DBE6FD;
+  color: #2978B5;
   margin-right:2rem;
   margin-bottom: 1rem;
 }

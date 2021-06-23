@@ -1,10 +1,10 @@
 .liked{
-  color: rgb(113, 233, 233);
+  color: #DBE6FD;
   cursor: pointer;
 }
 
 .like{
-  color:rgb(113, 233, 233);
+  color:#DBE6FD;
   cursor: pointer;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .clipPageTitle{
-  color:rgb(113, 233, 233);
+  color:#DBE6FD;
   display: flex;
   justify-content: center;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -25,7 +25,7 @@
 }
 .clipEditButton{
   text-decoration: none;
-  color:rgb(113, 233, 233);
+  color:#DBE6FD;
   border:none;
   margin-bottom: 1rem;
 }
@@ -36,7 +36,7 @@
 }
 
 .clipDescriptionLink{
-  background-color: rgb(113, 233, 233);
+  background-color: #DBE6FD;
   color: white;
   border-radius: 50%;
   width: 5rem;
@@ -62,13 +62,13 @@
   height:6rem;
   width:20rem;
   text-align: center;
-  border: 1px solid rgb(113, 233, 233);
+  border: 1px solid #DBE6FD;
 
 }
 
 .commentSubmit{
   display:flex;
-  background-color:rgb(113, 233, 233);;
+  background-color:#DBE6FD;;
   color:white;
   border:none;
   margin-left:8.5rem;
@@ -76,7 +76,7 @@
 }
 
 .clipVideo{
-  border:1px solid rgb(113, 233, 233);
+  border:1px solid #DBE6FD;
   margin-left: 1rem;
 }
 
@@ -85,12 +85,12 @@
   justify-content: center;
   margin-top: 5rem;
   width: 45rem;
-  border-bottom: 1px solid rgb(113, 233, 233);
-  color:rgb(113, 233, 233);
+  border-bottom: 1px solid #DBE6FD;
+  color:#DBE6FD;
 }
 
 .clipUserUpload{
-  color:rgb(113, 233, 233);
+  color:#DBE6FD;
   display:flex;
   justify-content: flex-start;
   text-decoration: none;
@@ -101,14 +101,14 @@
 }
 
 .clipUserUploadComment{
-  color:rgb(113, 233, 233);
+  color:#DBE6FD;
   text-decoration: none;
   /* margin-left:3rem; */
   margin-top: -1.2rem;
   font-size:large;
 }
 .clipCommentLink{
-  background-color: rgb(113, 233, 233);
+  background-color: #DBE6FD;
   color: white;
   border-radius: 50%;
   width: 5rem;
@@ -134,7 +134,7 @@
 }
 
 .deleteButton{
-  color:rgb(113, 233, 233);
+  color:#DBE6FD;
   border: none;
   background-color: white;
   /* margin-left:1.5rem; */
@@ -142,13 +142,13 @@
 
 .commentDeleteButton{
   /* margin-bottom: 3rem; */
-  color: rgb(113, 233, 233);
+  color: #DBE6FD;
   background-color: white;
   border: none;
 }
 
 .commentEditButton {
-  color: rgb(113, 233, 233);
+  color: #DBE6FD;
   background-color: white;
   border: none;
   /* margin-bottom: 2rem; */

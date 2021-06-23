@@ -20,12 +20,12 @@
   flex-direction: row; */
   margin-top: 1rem;
   width: 20rem;
-  border: 3px solid rgb(113, 233, 233);
+  border: 3px solid #DBE6FD;
 }
 
 .thumbTitle{
   max-width: 12rem;
-  color:rgb(113, 233, 233);
+  color:#DBE6FD;
   margin-left:6rem;
 }
 
@@ -40,26 +40,26 @@
   width: 20rem;
   height: 1rem;
   text-align: center;
-  border: 1px solid rgb(113, 233, 233);
-  color:rgb(113, 233, 233)
+  border: 1px solid #DBE6FD;
+  color:#DBE6FD
 
 }
 
 .homeSearch::placeholder{
-  color:rgb(113, 233, 233)
+  color:#DBE6FD
 }
 
 .thumbNailUserName{
   display: flex;
   justify-content: center;
-  color:rgb(113, 233, 233);
+  color:#DBE6FD;
   text-decoration: none;
   margin-top: 1rem;
 }
 
 .thumbNailUserNameCircle{
   position: relative;
-  background-color: rgb(113, 233, 233);
+  background-color: #DBE6FD;
   color: white;
   border-radius: 50%;
   border:none;

@@ -18,14 +18,14 @@
 .homeThumbNails{
   margin-top: 1rem;
   width: 20rem;
-  border: 3px solid #2978B5;
+  border: 3px solid #0A81AB;
 }
 
 .thumbTitle{
   display: flex;
   justify-content: center;
   max-width: 20rem;
-  color:#2978B5;
+  color:#0A81AB;
 }
 
 .thumbNaildescrip{
@@ -39,26 +39,26 @@
   width: 20rem;
   height: 1rem;
   text-align: center;
-  border: 1px solid #2978B5;
-  color:#2978B5
+  border: 1px solid #0A81AB;
+  color:#0A81AB
 
 }
 
 .homeSearch::placeholder{
-  color:#2978B5
+  color:#0A81AB
 }
 
 .thumbNailUserName{
   display: flex;
   justify-content: center;
-  color:#2978B5;
+  color:#0A81AB;
   text-decoration: none;
   margin-top: 1rem;
 }
 
 .thumbNailUserNameCircle{
   position: relative;
-  background-color: #2978B5;
+  background-color: #0A81AB;
   color: white;
   border-radius: 50%;
   border:none;

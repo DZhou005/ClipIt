@@ -11,11 +11,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px solid #2978B5;
+  border: 1px solid #0A81AB;
 }
 
 .uploadGreeting{
-  color:#2978B5;
+  color:#0A81AB;
   /* margin-bottom: 10rem; */
 }
 
@@ -23,18 +23,18 @@
   margin-left: 5rem;
    margin-top: 1rem;
    margin-bottom: 3rem;
-   color:#2978B5;
+   color:#0A81AB;
 }
 
 .uploadTitle{
-  border: 1px solid #2978B5;
+  border: 1px solid #0A81AB;
   width:20rem;
   height:1.5rem;
 
 }
 
 .uploadDescription{
-  border: 1px solid #2978B5;
+  border: 1px solid #0A81AB;
   width:20rem;
   height:5rem;
   margin-top: 3rem;
@@ -42,7 +42,7 @@
 
 .uploadSubmit{
   color:white;
-  background-color: #2978B5;
+  background-color: #0A81AB;
   border:none;
   margin-top: 2rem;
 }

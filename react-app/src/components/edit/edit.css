@@ -4,8 +4,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px solid #2978B5;
-  color:#2978B5;
+  border: 1px solid #0A81AB;
+  color:#0A81AB;
   width: 20.5rem;
 }
 .editContainer{
@@ -17,7 +17,7 @@
 }
 
 .editTitle {
-  color:#2978B5;
+  color:#0A81AB;
   display: flex;
   justify-content: center;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -28,7 +28,7 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   width:20rem;
-  border: 1px solid #2978B5;
+  border: 1px solid #0A81AB;
 
 }
 
@@ -37,17 +37,17 @@
   margin-bottom: 1rem;
   width:20rem;
   height:5rem;
-  border: 1px solid #2978B5;
+  border: 1px solid #0A81AB;
 }
 .editFormSubmit {
   margin-right: 1rem;
   color:white;
-  background-color: #2978B5;
+  background-color: #0A81AB;
   border:none;
 }
 .editFormCancel{
   color:white;
-  background-color: #2978B5;
+  background-color: #0A81AB;
   border:none;
   text-decoration: none;
   padding-left:.3rem;

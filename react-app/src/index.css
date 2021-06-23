@@ -2,7 +2,8 @@
 body{
   margin:0;
   padding: 0;
-  background: linear-gradient(0.25turn, #323232, #AAAAAA, #DDDDDD);
+  background: linear-gradient(0.25turn, #696969, #919191, #DDDDDD);
+  z-index: 0;
 }
 
 button{

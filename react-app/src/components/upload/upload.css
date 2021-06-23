@@ -16,7 +16,6 @@
 
 .uploadGreeting{
   color:#0A81AB;
-  /* margin-bottom: 10rem; */
 }
 
 .fileUpload{
@@ -45,4 +44,9 @@
   background-color: #0A81AB;
   border:none;
   margin-top: 2rem;
+}
+
+.uploadSubmit:hover{
+  color:#0A81AB;
+  background-color: white;
 }

@@ -4,8 +4,6 @@
   border-bottom: 2px solid #0A81AB;
   height: 2.2rem;
   background-color: white;
-  margin-top:0;
-  z-index: 1;
 
 }
 
@@ -24,6 +22,10 @@
   position: relative;
   display: inline-block;
 
+}
+.dropbtn:hover{
+  color:white;
+  background-color: #9db2b9;;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -56,7 +58,9 @@
   margin-right:2rem;
   margin-bottom: 1rem;
 }
-
+.uploadButton:hover{
+  color:#9db2b9;
+}
 .navBarHome{
   width: 10rem;
 }

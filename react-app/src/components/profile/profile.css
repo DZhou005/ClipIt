@@ -28,6 +28,12 @@
   border: 3px solid #0A81AB;
 
 }
+.profileThumbNails:hover{
+  border-color:white;
+}
+.profileThumbNailTitle:hover{
+  color:white;  
+}
 
 .profileThumbNailTitle{
   display:flex;

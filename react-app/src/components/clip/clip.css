@@ -136,22 +136,19 @@
 .deleteButton{
   color:#0A81AB;
   border: none;
-  background-color: white;
-  /* margin-left:1.5rem; */
+  background-color: inherit;
 }
 
 .commentDeleteButton{
-  /* margin-bottom: 3rem; */
   color: #0A81AB;
-  background-color: white;
+  background-color: inherit;
   border: none;
 }
 
 .commentEditButton {
   color: #0A81AB;
-  background-color: white;
+  background-color: inherit;
   border: none;
-  /* margin-bottom: 2rem; */
 }
 
 .editAndDelete{

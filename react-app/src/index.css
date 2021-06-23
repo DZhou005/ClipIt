@@ -4,6 +4,7 @@ body{
   padding: 0;
   background: linear-gradient(0.25turn, #696969, #919191, #DDDDDD);
   z-index: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 button{

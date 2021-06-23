@@ -20,7 +20,7 @@ function Clip() {
   const username = user?.username
   const commentsArray = useSelector(state => state?.clipReducer?.commentDict)
   const [description, setDescription] = useState('')
-  const [showModal, setShowModal] = useState(false)
+
 
 
   useEffect(() => {

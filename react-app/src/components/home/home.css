@@ -14,6 +14,20 @@
 .thumbNails{
   margin: 2.5rem;
 }
+.thumbNailUserNameCircle:hover{
+  color:#0A81AB;
+  background-color: white;
+}
+.thumbTitle:hover{
+  color: white;
+}
+.homeThumbNails:hover{
+  border-color:white;
+}
+
+.thumbNailUserName:hover{
+  color:white;
+}
 
 .homeThumbNails{
   margin-top: 1rem;

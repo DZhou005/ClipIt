@@ -29,10 +29,28 @@
   border:none;
   margin-bottom: 1rem;
 }
+.clipEditButton:hover{
+  color: white;
+}
 
 .clipDescription{
   margin-top: 1rem;
   overflow-wrap: break-word;
+}
+.clipUserUpload:hover{
+  color:white;
+}
+.clipUserUploadComment:hover{
+  color:white;
+}
+.clipCommentLink:hover{
+  color:#0A81AB;
+  background-color: white;
+}
+
+.clipDescriptionLink:hover{
+  color:#0A81AB;
+  background-color: white;
 }
 
 .clipDescriptionLink{
@@ -73,6 +91,10 @@
   border:none;
   margin-left:8.5rem;
 
+}
+.commentSubmit:hover{
+  background-color: white;
+  color:#0A81AB;
 }
 
 .clipVideo{

@@ -9,4 +9,13 @@ body{
 
 button{
   cursor: pointer;
+
+}
+button:hover {
+  color:whitesmoke
+
+}
+
+link:hover{
+  color: white;
 }

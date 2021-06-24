@@ -124,7 +124,7 @@ function Clip() {
       <h5>uploaded on:{clip.createAt}</h5>
       <h4 className="likesBtn">{likeChecked()}&nbsp;&nbsp;Likes: {likesOnAClip?.length}</h4>
       <div className="clipProfileLink">
-        <Link className="clipDescriptionLink" to={`/profile/${clip.user?.username}`}>{clip.user?.username?.charAt(0).toUpperCase()}</Link> <Link className="clipUserUpload" to={`/profile/${clip.user?.username}`}>{clip.user?.username}:</Link>
+        <Link className="clipDescriptionLink" to={`/profile/${clip.user?.username}`}>{clip.user?.username?.charAt(0).toUpperCase()}</Link> <Link className="clipUserUpload" to={`/profile/${clip.user?.username}`}>{clip.user?.username}</Link>
       </div>
       <h4 className="clipDescription">
         {clip.description}
@@ -143,17 +143,17 @@ function Clip() {
         {commentsArray?.map((comment,i) => {
           return (
             <div className="commentButtons" key={i}>
-              <Link className="clipCommentLink" to={`/profile/${comment.userName}`}>{comment.userName.charAt(0).toUpperCase()}</Link><Link className="clipUserUploadComment" to={`/profile/${comment.userName}`}>{comment.userName}:</Link> <h4 className="commentDescription">{comment.description}</h4>
-              <div className="editAndDelete">
-                {checkCommentEdit(comment?.userId, comment?.id)}
-                {commentModal === comment.id &&
-                  <Modal onClose={() => dispatch(hideEdit(comment.id))}>
-                    <EditComment comment={comment}/>
-                  </Modal>
-                }
-                {checkCommentUser(comment?.userId, comment?.id)}
-              </div>
+              <Link className="clipCommentLink" to={`/profile/${comment.userName}`}>{comment.userName.charAt(0).toUpperCase()}</Link><Link className="clipUserUploadComment" to={`/profile/${comment.userName}`}>{comment.userName}</Link> <h4 className="commentDescription">{comment.description}</h4>
+            <div className="editAndDelete">
+              {checkCommentEdit(comment?.userId, comment?.id)}
+              {commentModal === comment.id &&
+                <Modal onClose={() => dispatch(hideEdit(comment.id))}>
+                  <EditComment comment={comment}/>
+                </Modal>
+              }
+              {checkCommentUser(comment?.userId, comment?.id)}
             </div>
+              </div>
           )
         })}
       </div>

@@ -134,8 +134,8 @@
   border-radius: 50%;
   width: 5rem;
   height:5rem;
+  margin-left: 12rem;
   border:none;
-  margin-left:3rem;
   padding-top: .5rem;
   padding-left: .8rem;
   padding-right: .8rem;
@@ -151,8 +151,6 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
   height: 3rem;
-  overflow-wrap:break-word;
-  max-width: 20rem;
 }
 
 .deleteButton{
@@ -168,6 +166,8 @@
 }
 
 .commentEditButton {
+  display: flex;
+  align-items: flex-end;
   color: #3d4a69;
   background-color: inherit;
   border: none;
@@ -176,6 +176,7 @@
 .editAndDelete{
   display: flex;
   justify-content: center;
+  margin-top: 3rem;
 }
 
 .commentsContainer{
@@ -185,5 +186,7 @@
 }
 
 .commentButtons{
-  margin-top:2rem;
+  width:30rem;
+  margin-top:4rem;
+  overflow-wrap: break-word;
 }

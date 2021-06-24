@@ -1,4 +1,4 @@
-# Clip It
+# ClipIt
 [Live site](http://clipit1.herokuapp.com/)
 
 ## Wiki Links
@@ -8,10 +8,10 @@
  - [API Documentation](https://github.com/DZhou005/ClipIt/wiki/Api-Documentation)
 
 ## Project Summary
-	Clip It is a website to upload your video game highlights and share it with the world!
-  
+	ClipIt is a website to upload your video game highlights and share it with the world!
+
 ## Technology Used
- 
+
 - Python
 - JavaScript
 - CSS

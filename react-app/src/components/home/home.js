@@ -21,7 +21,6 @@ function AllClip() {
   return (
     <div className='homePageContainer'>
       <input className="homeSearch" type='text' placeholder="Search..." onChange={event => {setSearchTerm(event.target.value)}}/>
-      {/* <h2 className='homeTitle'>Clip It Highlights!</h2> */}
       <div className='homeInnerContainer'>
         {clipsArray.length ? clipsArray.slice(0).reverse().filter((val) => {
           if(searchTerm === "") {

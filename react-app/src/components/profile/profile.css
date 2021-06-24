@@ -1,5 +1,5 @@
 .profileTitle{
-  color:#0A81AB;
+  color:#3d4a69;
   display: flex;
   justify-content: center;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -25,21 +25,21 @@
   margin-top: 2.5rem;
   margin-left:2.5rem;
   margin-right:2.5rem;
-  border: 3px solid #0A81AB;
+  border: 3px solid #3d4a69;
 
 }
 .profileThumbNails:hover{
   border-color:white;
 }
 .profileThumbNailTitle:hover{
-  color:white;  
+  color:white;
 }
 
 .profileThumbNailTitle{
   display:flex;
   justify-content: center;
   width: 25rem;
-  color: #0A81AB;
+  color: #3d4a69;
 }
 
 .profileThumbNailDesc{
@@ -52,10 +52,10 @@
   width: 20rem;
   height: 1rem;
   text-align: center;
-  border: 1px solid #0A81AB;
-  color:#0A81AB
+  border: 1px solid #3d4a69;
+  color:#3d4a69
 }
 
 .profileSearch::placeholder{
-  color:#0A81AB;
+  color:#3d4a69;
 }

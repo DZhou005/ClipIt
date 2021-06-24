@@ -1,14 +1,14 @@
 .navContainer {
   display: flex;
   justify-content: flex-end;
-  border-bottom: 2px solid #0A81AB;
+  border-bottom: 2px solid #3d4a69;
   height: 2.2rem;
-  background-color: white;
+  background-color: rgb(231, 231, 231);
 
 }
 
 .dropbtn {
-  background-color: #0A81AB;
+  background-color: #3d4a69;
   color: white;
   border-radius: 50%;
   width: 2rem;
@@ -54,7 +54,7 @@
 .dropdown:hover .dropdown-content {display: block;}
 
 .uploadButton{
-  color: #0A81AB;
+  color: #3d4a69;
   margin-right:2rem;
   margin-bottom: 1rem;
 }
@@ -63,9 +63,11 @@
 }
 .navBarHome{
   width: 10rem;
+  height: 2.5rem;
 }
 .homeContainer{
   display:flex;
   align-items: flex-start;
   height: .5rem;
+  background-color: rgb(231, 231, 231);
 }

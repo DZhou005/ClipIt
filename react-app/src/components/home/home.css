@@ -15,7 +15,7 @@
   margin: 2.5rem;
 }
 .thumbNailUserNameCircle:hover{
-  color:#0A81AB;
+  color:#3d4a69;
   background-color: white;
 }
 .thumbTitle:hover{
@@ -32,14 +32,14 @@
 .homeThumbNails{
   margin-top: 1rem;
   width: 20rem;
-  border: 3px solid #0A81AB;
+  border: 3px solid #3d4a69;
 }
 
 .thumbTitle{
   display: flex;
   justify-content: center;
   max-width: 20rem;
-  color:#0A81AB;
+  color:#3d4a69;
 }
 
 .thumbNaildescrip{
@@ -53,26 +53,26 @@
   width: 20rem;
   height: 1rem;
   text-align: center;
-  border: 1px solid #0A81AB;
-  color:#0A81AB
+  border: 1px solid #3d4a69;
+  color:#3d4a69
 
 }
 
 .homeSearch::placeholder{
-  color:#0A81AB
+  color:#3d4a69
 }
 
 .thumbNailUserName{
   display: flex;
   justify-content: center;
-  color:#0A81AB;
+  color:#3d4a69;
   text-decoration: none;
   margin-top: 1rem;
 }
 
 .thumbNailUserNameCircle{
   position: relative;
-  background-color: #0A81AB;
+  background-color: #3d4a69;
   color: white;
   border-radius: 50%;
   border:none;

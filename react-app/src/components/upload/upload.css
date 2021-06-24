@@ -11,29 +11,29 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px solid #0A81AB;
+  border: 1px solid #3d4a69;
 }
 
 .uploadGreeting{
-  color:#0A81AB;
+  color:#3d4a69;
 }
 
 .fileUpload{
   margin-left: 5rem;
    margin-top: 1rem;
    margin-bottom: 3rem;
-   color:#0A81AB;
+   color:#3d4a69;
 }
 
 .uploadTitle{
-  border: 1px solid #0A81AB;
+  border: 1px solid #3d4a69;
   width:20rem;
   height:1.5rem;
 
 }
 
 .uploadDescription{
-  border: 1px solid #0A81AB;
+  border: 1px solid #3d4a69;
   width:20rem;
   height:5rem;
   margin-top: 3rem;
@@ -41,12 +41,12 @@
 
 .uploadSubmit{
   color:white;
-  background-color: #0A81AB;
+  background-color: #3d4a69;
   border:none;
   margin-top: 2rem;
 }
 
 .uploadSubmit:hover{
-  color:#0A81AB;
+  color:#3d4a69;
   background-color: white;
 }

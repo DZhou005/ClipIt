@@ -136,6 +136,7 @@
   width: 5rem;
   height:5rem;
   border:none;
+  margin-left: 6rem;
   padding-top: .5rem;
   padding-left: .8rem;
   padding-right: .8rem;
@@ -153,7 +154,7 @@
   height: 3rem;
   overflow-wrap:break-word;
   margin-left: 1rem;
-  max-width: 5rem;
+  max-width: 20rem;
 }
 
 .deleteButton{

@@ -1,7 +1,7 @@
  import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link, useHistory} from "react-router-dom";
-import { clipInfo, likeClip, unlikeClip, commentOnClip, deleteClip, editComment, deleteComment } from '../../store/clip';
+import { clipInfo, likeClip, unlikeClip, commentOnClip, deleteClip, deleteComment } from '../../store/clip';
 import { showEdit, hideEdit } from '../../store/modal'
 import './clip.css'
 import { Modal } from "../../context/modal"
@@ -21,7 +21,7 @@ function Clip() {
   const commentsArray = useSelector(state => state?.clipReducer?.commentDict)
   const [description, setDescription] = useState('')
 
-
+  var confirm;
 
   useEffect(() => {
     (async () => {
@@ -57,9 +57,19 @@ function Clip() {
   }
 
   const clipDeleteButton = async () => {
-    await dispatch(deleteClip(id))
-    dispatch(clipInfo(id))
-    history.push(`/`)
+    var r = window.confirm('Are you sure you want to delete your clip?')
+
+    if(r === true) {
+      confirm = true;
+    }
+    if(confirm === true) {
+      await dispatch(deleteClip(id))
+      dispatch(clipInfo(id))
+      history.push(`/`)
+    }
+    else {
+      dispatch(clipInfo(id))
+    }
   }
 
   const unLikeClip = async () => {

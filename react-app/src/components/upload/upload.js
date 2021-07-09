@@ -46,7 +46,8 @@ const UploadClip = () => {
 
     return (
         <div className="uploadFormContainer" >
-                <h1 className="uploadGreeting">Upload your clip here!</h1>
+                <h1 className="uploadGreeting">Upload your clip here</h1>
+                <h3 className="uploadGreeting">Please make sure your clip is a mp4 file, thanks!</h3>
                 <form className="uploadForm" onSubmit={handleSubmit}>
                     <input
                     type="file"
